@@ -23,6 +23,11 @@ const products = [
     title: "Purificadores IBBL",
     description: "Liderança em refrigeração. Água gelada com rapidez e sistemas de filtragem de alta performance.",
   },
+  {
+    icon: <Star className="w-8 h-8" />,
+    title: "Purificadores Soft",
+    description: "O clássico que você conhece. Durabilidade extrema e o melhor sistema de refrigeração do mercado.",
+  },
 ];
 
 const benefits = [
@@ -57,7 +62,7 @@ export default function Products() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
           {products.map((item, index) => (
             <motion.div
               key={index}

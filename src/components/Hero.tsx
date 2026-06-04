@@ -33,7 +33,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
-              Venda de purificadores de água das melhores marcas: Toplife, Latina e IBBL. Garanta água cristalina e saúde para quem você ama.
+              Venda de purificadores de água das melhores marcas: Toplife, Latina, IBBL e Soft. Garanta água cristalina e saúde para quem você ama.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -97,7 +97,7 @@ export default function Hero() {
                 {/* Floating tags */}
                 <div className="absolute top-10 right-10 bg-white/90 backdrop-blur px-4 py-3 rounded-2xl shadow-lg border border-slate-100 animate-bounce">
                   <div className="text-xs text-slate-500 font-bold uppercase tracking-widest leading-none mb-1">Qualidade</div>
-                  <div className="text-blue-600 font-bold">IBBL & Latina</div>
+                  <div className="text-blue-600 font-bold">IBBL & Soft</div>
                 </div>
               </div>
             </div>
