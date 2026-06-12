@@ -29,7 +29,7 @@ export default function Hero() {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-              Você confia na água que sua <span className="text-blue-600">Família</span> esta bebendo?
+              Água Pura e Saúde para sua <span className="text-blue-600">Família</span> em Viana.
             </h1>
             
             <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
