@@ -25,8 +25,8 @@ const products = [
   },
   {
     icon: <Star className="w-8 h-8" />,
-    title: "Purificadores Soft",
-    description: "O clássico que você conhece. Durabilidade extrema e o melhor sistema de refrigeração do mercado.",
+    title: "Outras Marcas",
+    description: "Trabalhamos com diversas outras marcas para garantir a melhor solução para sua necessidade.",
   },
 ];
 
