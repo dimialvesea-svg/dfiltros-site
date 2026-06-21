@@ -42,13 +42,11 @@ export default function Header() {
               </a>
             ))}
             <a
-              href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
+              href="tel:+5527999012401"
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors shadow-sm"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <Phone className="w-4 h-4 mr-2" />
-              {BUSINESS_INFO.phone}
+              Ligar Agora
             </a>
           </div>
 

@@ -25,3 +25,13 @@ export const BUSINESS_INFO = {
   },
   googleMapsUrl: "https://www.google.com/maps/dir/?api=1&destination=Av.+Espírito+Santo,+20+-+Marcílio+de+Noronha,+Viana+-+ES",
 };
+
+export const REFIL_BRANDS = [
+  "IBBL",
+  "Latina",
+  "Toplife",
+  "Colormaq",
+  "Eletrolux",
+  "Soft",
+  "Outros",
+];

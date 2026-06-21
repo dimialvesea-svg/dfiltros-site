@@ -1,0 +1,92 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { X } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import React, { useState } from 'react';
+import { BUSINESS_INFO, REFIL_BRANDS } from '../constants';
+
+interface RefilModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function RefilModal({ isOpen, onClose }: RefilModalProps) {
+  const [formData, setFormData] = useState({
+    nome: '',
+    telefone: '',
+    refil: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form data:', formData);
+    alert('Orçamento de Refil solicitado com sucesso! Nossa equipe entrará em contato.');
+    onClose();
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50"
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="fixed inset-0 flex items-center justify-center z-50 p-4"
+          >
+            <div className="bg-white p-8 rounded-3xl shadow-xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-display font-bold text-slate-900">Orçamento de Refil</h2>
+                <button onClick={onClose} className="p-2 hover:bg-slate-100 rounded-full">
+                  <X className="w-6 h-6 text-slate-500" />
+                </button>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Nome</label>
+                  <input required name="nome" type="text" onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Telefone</label>
+                  <input required name="telefone" type="tel" onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Marca do Refil</label>
+                  <select required name="refil" onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">Selecione...</option>
+                    {REFIL_BRANDS.map(brand => (
+                      <option key={brand} value={brand}>{brand}</option>
+                    ))}
+                  </select>
+                </div>
+                
+                <button type="submit" className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors">
+                  Enviar Solicitação
+                </button>
+              </form>
+              
+              <p className="text-center text-sm text-slate-500 mt-6">
+                Ou prefere falar diretamente? <a href={`https://wa.me/${BUSINESS_INFO.whatsapp}`} className="text-blue-600 font-bold hover:underline" target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
+              </p>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+}
