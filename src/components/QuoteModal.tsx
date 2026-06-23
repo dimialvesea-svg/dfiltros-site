@@ -58,7 +58,11 @@ setFormData({
 });
 
 onClose();
-```
+} catch (error) {
+  console.error(error);
+  alert("Erro ao enviar solicitação. Tente novamente.");
+}
+};
 
 } catch (error) {
 console.error(error);
