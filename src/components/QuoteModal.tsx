@@ -35,15 +35,16 @@ nome: formData.nome,
 telefone: formData.telefone,
 email: formData.email,
 produto: formData.produto,
-mensagem: formData.mensagem
-})
+mensagem: formData.mensagem,
+}),
 }
 );
 
+```
 if ((window as any).dataLayer) {
   (window as any).dataLayer.push({
     event: "formulario_enviado",
-    produto: formData.produto
+    produto: formData.produto,
   });
 }
 
@@ -54,15 +55,18 @@ setFormData({
   telefone: "",
   email: "",
   produto: "",
-  mensagem: ""
+  mensagem: "",
 });
 
 onClose();
+```
+
 } catch (error) {
-  console.error(error);
-  alert("Erro ao enviar solicitação. Tente novamente.");
+console.error(error);
+alert("Erro ao enviar solicitação. Tente novamente.");
 }
 };
+
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
