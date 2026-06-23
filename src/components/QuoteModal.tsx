@@ -22,12 +22,51 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     mensagem: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form data:', formData);
-    alert('Orçamento solicitado com sucesso! Nossa equipe entrará em contato.');
-    onClose();
-  };
+  const handleSubmit = (e: React.FormEvent) => const handleSubmit = async (e: React.FormEvent) => {
+e.preventDefault();
+
+try {
+await fetch(
+"https://script.google.com/macros/s/AKfycbzmgVNS-gz3ipQFzER2azeZXn4vbwfegJBXBOsXAF5dKDLkvAQi5nHx0EQw4-S3Hki7Ig/exec",
+{
+method: "POST",
+body: JSON.stringify({
+nome: formData.nome,
+telefone: formData.telefone,
+email: formData.email,
+produto: formData.produto,
+mensagem: formData.mensagem
+})
+}
+);
+
+```
+if (window.dataLayer) {
+  window.dataLayer.push({
+    event: "formulario_enviado",
+    produto: formData.produto
+  });
+}
+
+alert("Orçamento solicitado com sucesso! Nossa equipe entrará em contato.");
+
+setFormData({
+  nome: "",
+  telefone: "",
+  email: "",
+  produto: "",
+  mensagem: ""
+});
+
+onClose();
+```
+
+} catch (error) {
+console.error(error);
+alert("Erro ao enviar solicitação. Tente novamente.");
+}
+};
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
