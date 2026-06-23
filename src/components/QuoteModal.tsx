@@ -63,14 +63,7 @@ onClose();
   alert("Erro ao enviar solicitação. Tente novamente.");
 }
 };
-
-} catch (error) {
-console.error(error);
-alert("Erro ao enviar solicitação. Tente novamente.");
-}
-};
-
-
+  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
