@@ -40,9 +40,8 @@ mensagem: formData.mensagem
 }
 );
 
-```
-if (window.dataLayer) {
-  window.dataLayer.push({
+if ((window as any).dataLayer) {
+  (window as any).dataLayer.push({
     event: "formulario_enviado",
     produto: formData.produto
   });
