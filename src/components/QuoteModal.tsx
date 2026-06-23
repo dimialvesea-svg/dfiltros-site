@@ -40,7 +40,6 @@ mensagem: formData.mensagem,
 }
 );
 
-```
 if ((window as any).dataLayer) {
   (window as any).dataLayer.push({
     event: "formulario_enviado",
@@ -59,14 +58,11 @@ setFormData({
 });
 
 onClose();
-```
-
 } catch (error) {
 console.error(error);
 alert("Erro ao enviar solicitação. Tente novamente.");
 }
 };
-
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
