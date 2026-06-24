@@ -7,7 +7,7 @@ import { ArrowRight, Droplets, ShieldCheck, Star } from 'lucide-react';
 import { motion } from 'motion/react';
 import { BUSINESS_INFO } from '../constants';
 
-export default function Hero({ onOpenQuote, onOpenRefilQuote }: { onOpenQuote: () => void, onOpenRefilQuote: () => void }) {
+export default function Hero() {
   return (
     <section id="inicio" className="relative pt-24 pb-16 md:pt-40 md:pb-32 overflow-hidden">
       {/* Background decoration */}
@@ -37,21 +37,15 @@ export default function Hero({ onOpenQuote, onOpenRefilQuote }: { onOpenQuote: (
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                type="button"
-                onClick={onOpenQuote}
+              <a
+                href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 group"
               >
                 Solicitar Orçamento
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button
-                type="button"
-                onClick={onOpenRefilQuote}
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-xl font-bold hover:bg-slate-50 transition-all"
-              >
-                Orçamento de Refil
-              </button>
+              </a>
             </div>
 
             <div className="mt-12 flex items-center space-x-8">
