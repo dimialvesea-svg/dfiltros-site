@@ -26,7 +26,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     e.preventDefault();
     
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbzmgVNS-gz3ipQFzER2azeZXn4vbwfegJBXBOsXAF5dKDLkvAQi5nHx0EQw4-S3Hki7Ig/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbylzv1ncXHV7OhicPA05t8pJqMXtm-pPQOKbsEDyqyNJq0cCkIrsHKvm1u1skCrsegM/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
