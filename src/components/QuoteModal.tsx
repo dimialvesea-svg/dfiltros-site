@@ -22,48 +22,42 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     mensagem: ''
   });
 
- const handleSubmit = async (e: React.FormEvent) => {
-e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      await fetch('https://script.google.com/macros/s/AKfycbzmgVNS-gz3ipQFzER2azeZXn4vbwfegJBXBOsXAF5dKDLkvAQi5nHx0EQw4-S3Hki7Ig/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-try {
-await fetch(
-"https://script.google.com/macros/s/AKfycbzmgVNS-gz3ipQFzER2azeZXn4vbwfegJBXBOsXAF5dKDLkvAQi5nHx0EQw4-S3Hki7Ig/exec",
-{
-method: "POST",
-body: JSON.stringify({
-nome: formData.nome,
-telefone: formData.telefone,
-email: formData.email,
-produto: formData.produto,
-mensagem: formData.mensagem,
-}),
-}
-);
+      // Google Apps Script no-cors mode always returns opaque response (status 0)
+      
+      if (typeof window !== 'undefined' && (window as any).dataLayer) {
+        (window as any).dataLayer.push({ event: 'formulario_enviado' });
+      }
+      
+      alert('Orçamento solicitado com sucesso! Nossa equipe entrará em contato.');
+      
+      setFormData({
+        nome: '',
+        telefone: '',
+        email: '',
+        produto: '',
+        mensagem: ''
+      });
+      
+      onClose();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Erro ao enviar solicitação. Tente novamente.');
+    }
+  };
 
-if ((window as any).dataLayer) {
-  (window as any).dataLayer.push({
-    event: "formulario_enviado",
-    produto: formData.produto,
-  });
-}
-
-alert("Orçamento solicitado com sucesso! Nossa equipe entrará em contato.");
-
-setFormData({
-  nome: "",
-  telefone: "",
-  email: "",
-  produto: "",
-  mensagem: "",
-});
-
-onClose();
-} catch (error) {
-console.error(error);
-alert("Erro ao enviar solicitação. Tente novamente.");
-}
-};
-  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -96,19 +90,19 @@ alert("Erro ao enviar solicitação. Tente novamente.");
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">Nome</label>
-                  <input required name="nome" type="text" onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                  <input required name="nome" type="text" value={formData.nome} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">Telefone</label>
-                  <input required name="telefone" type="tel" onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                  <input required name="telefone" type="tel" value={formData.telefone} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">Email</label>
-                  <input required name="email" type="email" onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                  <input required name="email" type="email" value={formData.email} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">Produto Desejado</label>
-                  <select required name="produto" onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <select required name="produto" value={formData.produto} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                     <option value="">Selecione...</option>
                     <option value="Toplife">Purificador Toplife</option>
                     <option value="Latina">Purificador Latina</option>
@@ -118,7 +112,7 @@ alert("Erro ao enviar solicitação. Tente novamente.");
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1">Mensagem</label>
-                  <textarea name="mensagem" onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" rows={4} />
+                  <textarea name="mensagem" value={formData.mensagem} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" rows={4} />
                 </div>
                 
                 <button type="submit" className="w-full py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors">
