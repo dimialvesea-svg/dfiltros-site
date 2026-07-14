@@ -29,11 +29,14 @@ export default function Hero() {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-              Água Pura e Saúde para sua <span className="text-blue-600">Família</span> em Viana.
+              A saúde da sua família não tem preço. Troque o filtro do seu purificador hoje mesmo!
             </h1>
             
             <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
               Venda de purificadores de água das melhores marcas: Toplife, Latina, IBBL e Outras Marcas. Garanta água cristalina e saúde para quem você ama.
+            </p>
+            <p className="text-sm text-slate-500 mb-10 font-medium max-w-lg">
+              Linha de Refil Compatível para Purificadores SOFT, Electrolux, Master Frio, Libell, Europa, Colormaq, e outros ( Marcas WFS Filters, Planeta água, Aquasana).
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
