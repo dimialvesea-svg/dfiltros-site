@@ -6,6 +6,7 @@
 import { ArrowRight, Droplets, ShieldCheck, Star } from 'lucide-react';
 import { motion } from 'motion/react';
 import { BUSINESS_INFO } from '../constants';
+import FloatingGallery from './FloatingGallery';
 
 export default function Hero() {
   return (
@@ -69,42 +70,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-[4/3] rounded-3xl bg-slate-200/50 overflow-hidden shadow-2xl relative">
-              {/* Using a placeholder visual representation since image generation failed */}
-              <div className="absolute inset-0 bg-linear-to-tr from-blue-100 to-white flex items-center justify-center overflow-hidden">
-                <motion.div
-                  animate={{ 
-                    y: [0, -20, 0],
-                    rotate: [0, 5, 0]
-                  }}
-                  transition={{ 
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="w-48 h-80 bg-white rounded-2xl shadow-xl border border-slate-100 p-6 flex flex-col items-center"
-                >
-                  <div className="w-full h-2/3 bg-slate-50 rounded-lg mb-4 flex items-center justify-center">
-                    <Droplets className="w-16 h-16 text-blue-400 opacity-20" />
-                  </div>
-                  <div className="w-3/4 h-3 bg-slate-100 rounded-full mb-2" />
-                  <div className="w-1/2 h-3 bg-slate-100 rounded-full" />
-                </motion.div>
-                
-                {/* Floating tags */}
-                <div className="absolute top-10 right-10 bg-white/90 backdrop-blur px-4 py-3 rounded-2xl shadow-lg border border-slate-100 animate-bounce">
-                  <div className="text-xs text-slate-500 font-bold uppercase tracking-widest leading-none mb-1">Qualidade</div>
-                  <div className="text-blue-600 font-bold">IBBL & Outras</div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Decorative dots */}
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 grid grid-cols-4 gap-2 opacity-20">
-              {[...Array(16)].map((_, i) => (
-                <div key={i} className="w-2 h-2 bg-blue-600 rounded-full" />
-              ))}
-            </div>
+            <FloatingGallery />
           </motion.div>
         </div>
       </div>
