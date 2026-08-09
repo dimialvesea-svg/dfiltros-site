@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import InfoNote from './components/InfoNote';
 import Products from './components/Products';
 import Testimonials from './components/Testimonials';
 import Carousel from './components/Carousel';
@@ -32,6 +33,7 @@ export default function App() {
       <main>
         <Hero productImages={galleryImages} />
         <Products />
+        <InfoNote />
         <Carousel images={galleryImages} />
         <TeamGallery images={teamImages} />
         <Testimonials />
