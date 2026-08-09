@@ -25,7 +25,7 @@ export default function TeamGallery({ images }: TeamGalleryProps) {
               <img
                 src={image.url}
                 alt={image.name || `Membro da equipe ${index + 1}`}
-                className="w-full h-64 object-cover"
+                className="w-full h-64 object-contain"
               />
               {image.name && (
                 <div className="p-4 bg-slate-50 text-center font-semibold text-slate-800">

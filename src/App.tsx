@@ -23,7 +23,7 @@ export default function App() {
 
   const teamImages = [
     { url: 'https://lh3.googleusercontent.com/d/1ATmbEwLSwtzUqtgcjnwwcTYc-ulhY9r0', name: 'Nossa loja' },
-    { url: 'https://lh3.googleusercontent.com/d/1q8o0ww94Z45B6w2ttUcd4el0epo9N-fG', name: 'Proprietário' },
+    { url: 'https://lh3.googleusercontent.com/d/1q8o0ww94Z45B6w2ttUcd4el0epo9N-fG', name: 'Edmilson Alves, fale conosco.' },
   ];
 
   return (
