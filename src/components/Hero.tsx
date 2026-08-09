@@ -6,9 +6,13 @@
 import { ArrowRight, Droplets, ShieldCheck, Star } from 'lucide-react';
 import { motion } from 'motion/react';
 import { BUSINESS_INFO } from '../constants';
-import FloatingGallery from './FloatingGallery';
+import ProductCarousel from './ProductCarousel';
 
-export default function Hero() {
+interface HeroProps {
+  productImages?: { url: string }[];
+}
+
+export default function Hero({ productImages }: HeroProps) {
   return (
     <section id="inicio" className="relative pt-24 pb-16 md:pt-40 md:pb-32 overflow-hidden">
       {/* Background decoration */}
@@ -40,7 +44,7 @@ export default function Hero() {
               Linha de Refil Compatível para Purificadores SOFT, Electrolux, Master Frio, Libell, Europa, Colormaq, e outros ( Marcas WFS Filters, Planeta água, Aquasana).
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
               <a
                 href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
                 target="_blank"
@@ -50,6 +54,7 @@ export default function Hero() {
                 Solicitar Orçamento
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
+              {productImages && <ProductCarousel images={productImages} />}
             </div>
 
             <div className="mt-12 flex items-center space-x-8">
@@ -70,7 +75,6 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <FloatingGallery />
           </motion.div>
         </div>
       </div>
