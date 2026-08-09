@@ -23,7 +23,7 @@ export default function Carousel({ images }: CarouselProps) {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <section id="galeria" className="py-24 bg-slate-50">
+    <section id="galeria" className="py-16 bg-slate-50">
       <div className="max-w-2xl mx-auto px-4">
         <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-12 text-center">
           Nossa Galeria

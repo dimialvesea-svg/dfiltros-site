@@ -14,7 +14,7 @@ interface TeamGalleryProps {
 
 export default function TeamGallery({ images }: TeamGalleryProps) {
   return (
-    <section id="equipe" className="py-24 bg-white">
+    <section id="equipe" className="py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-12 text-center">
           Equipe Dfiltros

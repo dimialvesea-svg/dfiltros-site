@@ -50,7 +50,7 @@ const benefits = [
 
 export default function Products() {
   return (
-    <section id="produtos" className="py-24 bg-white relative">
+    <section id="produtos" className="py-16 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-base font-bold text-blue-600 uppercase tracking-widest mb-3">Nossos Produtos</h2>

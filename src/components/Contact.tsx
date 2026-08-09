@@ -9,7 +9,7 @@ import { BUSINESS_INFO } from '../constants';
 
 export default function Contact() {
   return (
-    <section id="contato" className="py-24 bg-slate-50">
+    <section id="contato" className="py-16 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           

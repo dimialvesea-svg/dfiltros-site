@@ -14,7 +14,7 @@ interface HeroProps {
 
 export default function Hero({ productImages }: HeroProps) {
   return (
-    <section id="inicio" className="relative pt-24 pb-16 md:pt-40 md:pb-32 overflow-hidden">
+    <section id="inicio" className="relative pt-16 pb-12 md:pt-24 md:pb-20 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/3" />
@@ -34,7 +34,7 @@ export default function Hero({ productImages }: HeroProps) {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-              A saúde da sua família não tem preço. Troque o filtro do seu purificador hoje mesmo!
+              Renove a qualidade da água que sua família está bebendo, troque o refil regularmente, evite contaminações e ganhe saúde!
             </h1>
             
             <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
