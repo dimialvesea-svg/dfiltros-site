@@ -34,7 +34,8 @@ export default function Hero({ productImages }: HeroProps) {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-              Renove a qualidade da água que sua família está bebendo, troque o refil regularmente, evite contaminações e ganhe saúde!
+              Você confia na água que está bebendo? <br />
+              <span className="text-3xl md:text-5xl">Qual foi a ultima vez, que trocou o refil do seu filtro ou purificador de água?</span>
             </h1>
             
             <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
