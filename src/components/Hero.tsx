@@ -34,15 +34,12 @@ export default function Hero({ productImages }: HeroProps) {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-              Você confia na água que está bebendo? <br />
-              <span className="text-3xl md:text-5xl">Qual foi a ultima vez, que trocou o refil do seu filtro ou purificador de água?</span>
+              Encontre o Purificador, Filtro ou Refil Ideal para Sua Água
             </h1>
             
             <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
-              Venda de purificadores de água das melhores marcas: Toplife, Latina, IBBL e Outras Marcas. Garanta água cristalina e saúde para quem você ama.
-            </p>
-            <p className="text-sm text-slate-500 mb-10 font-medium max-w-lg">
-              Linha de Refil Compatível para Purificadores SOFT, Electrolux, Master Frio, Libell, Europa, Colormaq, e outros ( Marcas WFS Filters, Planeta água, Aquasana).
+              Tenha água mais agradável e a solução certa para sua casa ou empresa. Purificadores, filtros e refis das principais marcas, com atendimento especializado para ajudar você a escolher o produto certo. <br/>
+              <span className="font-bold block mt-4">👉 Fale com um especialista e encontre a melhor opção para você.</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-center">
