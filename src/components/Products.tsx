@@ -53,7 +53,7 @@ export default function Products() {
     <section id="produtos" className="py-16 bg-slate-950 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-base font-bold text-black uppercase tracking-widest mb-3">Nossos Produtos</h2>
+          <h2 className="text-base font-bold text-white uppercase tracking-widest mb-3">Nossos Produtos</h2>
           <p className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
             As Melhores Marcas do Mercado
           </p>

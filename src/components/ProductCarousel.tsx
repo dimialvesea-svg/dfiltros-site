@@ -22,7 +22,7 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className="relative w-48 h-32 rounded-xl overflow-hidden shadow-md bg-slate-200">
+    <div className="relative w-48 h-32 rounded-xl overflow-hidden shadow-md bg-slate-800">
       <AnimatePresence mode="wait">
         <motion.img
           key={currentIndex}
@@ -38,15 +38,15 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
 
       <button
         onClick={prev}
-        className="absolute left-1 top-1/2 -translate-y-1/2 bg-white/70 p-1 rounded-full hover:bg-white transition-colors"
+        className="absolute left-1 top-1/2 -translate-y-1/2 bg-black/50 p-1 rounded-full hover:bg-black/70 transition-colors"
       >
-        <ChevronLeft className="w-4 h-4 text-slate-800" />
+        <ChevronLeft className="w-4 h-4 text-white" />
       </button>
       <button
         onClick={next}
-        className="absolute right-1 top-1/2 -translate-y-1/2 bg-white/70 p-1 rounded-full hover:bg-white transition-colors"
+        className="absolute right-1 top-1/2 -translate-y-1/2 bg-black/50 p-1 rounded-full hover:bg-black/70 transition-colors"
       >
-        <ChevronRight className="w-4 h-4 text-slate-800" />
+        <ChevronRight className="w-4 h-4 text-white" />
       </button>
     </div>
   );

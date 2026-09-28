@@ -14,7 +14,7 @@ interface HeroProps {
 
 export default function Hero({ productImages }: HeroProps) {
   return (
-    <section id="inicio" className="relative pt-16 pb-12 md:pt-24 md:pb-20 overflow-hidden">
+    <section id="inicio" className="relative pt-16 pb-12 md:pt-24 md:pb-20 overflow-hidden bg-slate-950">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/3" />
