@@ -23,12 +23,12 @@ export default function Carousel({ images }: CarouselProps) {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <section id="galeria" className="py-16 bg-slate-50">
+    <section id="galeria" className="py-16 bg-slate-950">
       <div className="max-w-2xl mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-12 text-center">
+        <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-12 text-center">
           Nossa Galeria
         </h2>
-        <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl bg-slate-200">
+        <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl bg-slate-800">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -44,7 +44,7 @@ export default function Carousel({ images }: CarouselProps) {
                 alt={`Galeria imagem ${currentIndex + 1}`}
               />
               {images[currentIndex].caption && (
-                <div className="bg-white py-3 px-4 text-center text-sm font-semibold text-slate-800">
+                <div className="bg-slate-900 py-3 px-4 text-center text-sm font-semibold text-slate-200">
                   {images[currentIndex].caption}
                 </div>
               )}
@@ -53,15 +53,15 @@ export default function Carousel({ images }: CarouselProps) {
 
           <button
             onClick={prev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full hover:bg-white transition-colors"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full hover:bg-black/70 transition-colors"
           >
-            <ChevronLeft className="w-6 h-6 text-slate-800" />
+            <ChevronLeft className="w-6 h-6 text-white" />
           </button>
           <button
             onClick={next}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full hover:bg-white transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full hover:bg-black/70 transition-colors"
           >
-            <ChevronRight className="w-6 h-6 text-slate-800" />
+            <ChevronRight className="w-6 h-6 text-white" />
           </button>
         </div>
       </div>
