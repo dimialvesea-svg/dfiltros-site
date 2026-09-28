@@ -50,14 +50,14 @@ const benefits = [
 
 export default function Products() {
   return (
-    <section id="produtos" className="py-16 bg-white relative">
+    <section id="produtos" className="py-16 bg-slate-950 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-base font-bold text-blue-600 uppercase tracking-widest mb-3">Nossos Produtos</h2>
-          <p className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6">
+          <h2 className="text-base font-bold text-black uppercase tracking-widest mb-3">Nossos Produtos</h2>
+          <p className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
             As Melhores Marcas do Mercado
           </p>
-          <p className="text-lg text-slate-600">
+          <p className="text-lg text-slate-400">
             Trabalhamos com marcas renomadas para garantir que você tenha sempre água pura e cristalina à disposição.
           </p>
         </div>
@@ -67,30 +67,30 @@ export default function Products() {
             <motion.div
               key={index}
               whileHover={{ y: -5 }}
-              className="p-8 rounded-3xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:shadow-slate-100 group"
+              className="p-8 rounded-3xl bg-slate-900 border border-slate-800 transition-all hover:bg-slate-800 group"
             >
-              <div className="w-16 h-16 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              <div className="w-16 h-16 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-display font-bold text-slate-900 mb-3">{item.title}</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">{item.description}</p>
+              <h3 className="text-xl font-display font-bold text-white mb-3">{item.title}</h3>
+              <p className="text-slate-400 leading-relaxed text-sm">{item.description}</p>
             </motion.div>
           ))}
         </div>
 
-        <div className="border-t border-slate-100 pt-24">
+        <div className="border-t border-slate-800 pt-24">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl font-display font-bold text-slate-900 mb-8">Diferenciais Dfiltros</h2>
+                <h2 className="text-3xl font-display font-bold text-white mb-8">Diferenciais Dfiltros</h2>
                 <div className="space-y-8">
                   {benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-start">
-                      <div className="mt-1 flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center">
+                      <div className="mt-1 flex-shrink-0 w-12 h-12 rounded-xl bg-blue-950 flex items-center justify-center">
                         {benefit.icon}
                       </div>
                       <div className="ml-5">
-                        <h4 className="text-lg font-bold text-slate-900 mb-1">{benefit.title}</h4>
-                        <p className="text-slate-600">{benefit.desc}</p>
+                        <h4 className="text-lg font-bold text-white mb-1">{benefit.title}</h4>
+                        <p className="text-slate-400">{benefit.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -98,7 +98,7 @@ export default function Products() {
               </div>
               
               <div className="relative">
-                <div className="bg-blue-600 rounded-3xl p-10 text-white relative overflow-hidden">
+                <div className="bg-blue-800 rounded-3xl p-10 text-white relative overflow-hidden">
                   <div className="absolute top-0 right-0 p-10 opacity-10">
                     <Droplet className="w-40 h-40" />
                   </div>
@@ -111,14 +111,14 @@ export default function Products() {
                       "Facilidade no pagamento."
                     ].map((item, i) => (
                       <li key={i} className="flex items-center">
-                        <CheckCircle2 className="w-5 h-5 mr-3 text-blue-300" />
+                        <CheckCircle2 className="w-5 h-5 mr-3 text-blue-200" />
                         <span className="font-medium">{item}</span>
                       </li>
                     ))}
                   </ul>
                   <a
                     href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
-                    className="inline-flex w-full items-center justify-center bg-white text-blue-600 py-4 rounded-xl font-bold hover:bg-slate-50 transition-colors"
+                    className="inline-flex w-full items-center justify-center bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-slate-800 transition-colors"
                   >
                     Falar com um Vendedor
                   </a>

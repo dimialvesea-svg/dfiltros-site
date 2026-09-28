@@ -28,18 +28,18 @@ export default function Hero({ productImages }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-semibold uppercase tracking-wider mb-6">
-              <Star className="w-3 h-3 mr-1 fill-blue-600" />
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-950 border border-blue-800 text-blue-300 text-xs font-semibold uppercase tracking-wider mb-6">
+              <Star className="w-3 h-3 mr-1 fill-blue-300" />
               5.0 Avaliações no Google
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-white leading-tight mb-6">
               Encontre o Purificador, Filtro ou Refil Ideal para Sua Água
             </h1>
             
-            <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
+            <p className="text-lg text-slate-400 mb-10 max-w-lg leading-relaxed">
               Tenha água mais agradável e a solução certa para sua casa ou empresa. Purificadores, filtros e refis das principais marcas, com atendimento especializado para ajudar você a escolher o produto certo. <br/>
-              <span className="font-bold block mt-4">👉 Fale com um especialista e encontre a melhor opção para você.</span>
+              <span className="font-bold block mt-4 text-slate-100">👉 Fale com um especialista e encontre a melhor opção para você.</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-center">
@@ -47,7 +47,7 @@ export default function Hero({ productImages }: HeroProps) {
                 href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 group"
+                className="inline-flex items-center justify-center px-8 py-4 bg-blue-500 text-white rounded-xl font-bold hover:bg-blue-600 transition-all shadow-lg shadow-blue-900/20 group"
               >
                 Solicitar Orçamento
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -56,11 +56,11 @@ export default function Hero({ productImages }: HeroProps) {
             </div>
 
             <div className="mt-12 flex items-center space-x-8">
-               <div className="flex items-center text-sm font-medium text-slate-500">
+               <div className="flex items-center text-sm font-medium text-slate-400">
                   <ShieldCheck className="w-5 h-5 mr-2 text-blue-500" />
                   Garantia de Fábrica
                </div>
-               <div className="flex items-center text-sm font-medium text-slate-500">
+               <div className="flex items-center text-sm font-medium text-slate-400">
                   <Droplets className="w-5 h-5 mr-2 text-blue-500" />
                   Peças Originais
                </div>
